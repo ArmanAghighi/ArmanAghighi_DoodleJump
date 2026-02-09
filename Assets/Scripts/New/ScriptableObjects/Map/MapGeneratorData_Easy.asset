@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49fd380ba7fbd9f4f9079e05358f979a, type: 3}
+  m_Name: MapGeneratorData_Easy
+  m_EditorClassIdentifier: 
+  Difficulty: 0
+  Segments:
+  - StartPosition: 40
+    PlatformData:
+    - PlatformData: {fileID: 11400000, guid: a3bc45f432dac834e869dedac2830b55, type: 2}
+      PlatformPercentage: 100
+    EndPosition: 400
+  - StartPosition: 400
+    PlatformData:
+    - PlatformData: {fileID: 11400000, guid: a3bc45f432dac834e869dedac2830b55, type: 2}
+      PlatformPercentage: 80
+    - PlatformData: {fileID: 11400000, guid: 4b41e3917ff701049a6803b88e96e73a, type: 2}
+      PlatformPercentage: 20
+    EndPosition: 1000
+  - StartPosition: 1000
+    PlatformData:
+    - PlatformData: {fileID: 11400000, guid: a3bc45f432dac834e869dedac2830b55, type: 2}
+      PlatformPercentage: 70
+    - PlatformData: {fileID: 11400000, guid: 4b41e3917ff701049a6803b88e96e73a, type: 2}
+      PlatformPercentage: 20
+    - PlatformData: {fileID: 11400000, guid: 9e383dce0c843164296dd9b61a72c516, type: 2}
+      PlatformPercentage: 10
+    EndPosition: 1800
+  - StartPosition: 1800
+    PlatformData:
+    - PlatformData: {fileID: 11400000, guid: a3bc45f432dac834e869dedac2830b55, type: 2}
+      PlatformPercentage: 60
+    - PlatformData: {fileID: 11400000, guid: 4b41e3917ff701049a6803b88e96e73a, type: 2}
+      PlatformPercentage: 15
+    - PlatformData: {fileID: 11400000, guid: 9e383dce0c843164296dd9b61a72c516, type: 2}
+      PlatformPercentage: 25
+    EndPosition: 3200
+  - StartPosition: 3200
+    PlatformData:
+    - PlatformData: {fileID: 11400000, guid: a3bc45f432dac834e869dedac2830b55, type: 2}
+      PlatformPercentage: 50
+    - PlatformData: {fileID: 11400000, guid: 4b41e3917ff701049a6803b88e96e73a, type: 2}
+      PlatformPercentage: 20
+    - PlatformData: {fileID: 11400000, guid: 9e383dce0c843164296dd9b61a72c516, type: 2}
+      PlatformPercentage: 20
+    - PlatformData: {fileID: 11400000, guid: 9d9475b131739aa4983b0384200a729e, type: 2}
+      PlatformPercentage: 10
+    EndPosition: 4800
+  - StartPosition: 4800
+    PlatformData:
+    - PlatformData: {fileID: 11400000, guid: a3bc45f432dac834e869dedac2830b55, type: 2}
+      PlatformPercentage: 30
+    - PlatformData: {fileID: 11400000, guid: 4b41e3917ff701049a6803b88e96e73a, type: 2}
+      PlatformPercentage: 20
+    - PlatformData: {fileID: 11400000, guid: 9e383dce0c843164296dd9b61a72c516, type: 2}
+      PlatformPercentage: 30
+    - PlatformData: {fileID: 11400000, guid: 9d9475b131739aa4983b0384200a729e, type: 2}
+      PlatformPercentage: 20
+    EndPosition: 6600
+  - StartPosition: 6600
+    PlatformData:
+    - PlatformData: {fileID: 11400000, guid: a3bc45f432dac834e869dedac2830b55, type: 2}
+      PlatformPercentage: 25
+    - PlatformData: {fileID: 11400000, guid: 4b41e3917ff701049a6803b88e96e73a, type: 2}
+      PlatformPercentage: 20
+    - PlatformData: {fileID: 11400000, guid: 9e383dce0c843164296dd9b61a72c516, type: 2}
+      PlatformPercentage: 25
+    - PlatformData: {fileID: 11400000, guid: 9d9475b131739aa4983b0384200a729e, type: 2}
+      PlatformPercentage: 20
+    - PlatformData: {fileID: 11400000, guid: ae5883b0e1d2d3e4ca58ace72ddb2804, type: 2}
+      PlatformPercentage: 10
+    EndPosition: 9000
+  - StartPosition: 9000
+    PlatformData:
+    - PlatformData: {fileID: 11400000, guid: a3bc45f432dac834e869dedac2830b55, type: 2}
+      PlatformPercentage: 20
+    - PlatformData: {fileID: 11400000, guid: 4b41e3917ff701049a6803b88e96e73a, type: 2}
+      PlatformPercentage: 20
+    - PlatformData: {fileID: 11400000, guid: 9e383dce0c843164296dd9b61a72c516, type: 2}
+      PlatformPercentage: 30
+    - PlatformData: {fileID: 11400000, guid: 9d9475b131739aa4983b0384200a729e, type: 2}
+      PlatformPercentage: 15
+    - PlatformData: {fileID: 11400000, guid: ae5883b0e1d2d3e4ca58ace72ddb2804, type: 2}
+      PlatformPercentage: 15
+    EndPosition: 13000
+  - StartPosition: 13000
+    PlatformData:
+    - PlatformData: {fileID: 11400000, guid: a3bc45f432dac834e869dedac2830b55, type: 2}
+      PlatformPercentage: 15
+    - PlatformData: {fileID: 11400000, guid: 4b41e3917ff701049a6803b88e96e73a, type: 2}
+      PlatformPercentage: 15
+    - PlatformData: {fileID: 11400000, guid: 9e383dce0c843164296dd9b61a72c516, type: 2}
+      PlatformPercentage: 25
+    - PlatformData: {fileID: 11400000, guid: 9d9475b131739aa4983b0384200a729e, type: 2}
+      PlatformPercentage: 15
+    - PlatformData: {fileID: 11400000, guid: ae5883b0e1d2d3e4ca58ace72ddb2804, type: 2}
+      PlatformPercentage: 15
+    - PlatformData: {fileID: 11400000, guid: dda7f3ead2611f248b3d907074676047, type: 2}
+      PlatformPercentage: 15
+    EndPosition: 20000
+  - StartPosition: 20000
+    PlatformData:
+    - PlatformData: {fileID: 11400000, guid: a3bc45f432dac834e869dedac2830b55, type: 2}
+      PlatformPercentage: 10
+    - PlatformData: {fileID: 11400000, guid: 4b41e3917ff701049a6803b88e96e73a, type: 2}
+      PlatformPercentage: 15
+    - PlatformData: {fileID: 11400000, guid: 9e383dce0c843164296dd9b61a72c516, type: 2}
+      PlatformPercentage: 40
+    - PlatformData: {fileID: 11400000, guid: 9d9475b131739aa4983b0384200a729e, type: 2}
+      PlatformPercentage: 10
+    - PlatformData: {fileID: 11400000, guid: ae5883b0e1d2d3e4ca58ace72ddb2804, type: 2}
+      PlatformPercentage: 15
+    - PlatformData: {fileID: 11400000, guid: dda7f3ead2611f248b3d907074676047, type: 2}
+      PlatformPercentage: 10
+    EndPosition: 200000
+  maxChance: 100
