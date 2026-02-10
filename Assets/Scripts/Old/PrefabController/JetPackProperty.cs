@@ -8,7 +8,7 @@ public class JetPackProperty : MonoBehaviour
     private Rigidbody2D _rb;
     private void Awake()
     {
-        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        _player = Player.Instance.transform;
         _rb = _player.GetComponent<Rigidbody2D>();
 
     }

@@ -14,6 +14,14 @@ public class PlatformDataEditor : Editor
     public override void OnInspectorGUI()
     {
         EditorGUI.BeginChangeCheck();
+
+        EditorGUILayout.LabelField("Platform GameObject",EditorStyles.boldLabel);
+        data.Prefab = (GameObject)EditorGUILayout.ObjectField(
+            new GUIContent("Prefab" , "Prefab of represented platform"),
+            data.Prefab,
+            typeof(GameObject),
+            false
+        );
         
         EditorGUILayout.LabelField("Platform Visuals",EditorStyles.boldLabel);
         data.PlatformSprite = (Sprite)EditorGUILayout.ObjectField(
@@ -42,11 +50,11 @@ public class PlatformDataEditor : Editor
 
         if (!data.HasAbility)
         {
-            data.PlatformAbility = Ability.None;
+            data.PlatformAbility = AbilityEnum.None;
         }
 
         EditorGUI.BeginDisabledGroup(!data.HasAbility);
-        data.PlatformAbility = (Ability)EditorGUILayout.EnumPopup(
+        data.PlatformAbility = (AbilityEnum)EditorGUILayout.EnumPopup(
             new GUIContent("Platform Ability", "Select the platform's ability. Only selectable if HasAbility is enabled."),
             data.PlatformAbility
         );

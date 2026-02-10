@@ -5,10 +5,8 @@ public class GameManager : Singleton<GameManager>
     private bool _isGameStarted;
     public bool IsGameStarted => _isGameStarted;
 
-    private  DifficultyLevel _difficulty;
-    public DifficultyLevel DifficultyLevel => _difficulty;
-
-    [SerializeField] private MapGeneratorData _mapGeneratorData;
+    private  DifficultyLevelEnum _difficulty;
+    public DifficultyLevelEnum DifficultyLevel => _difficulty;
 
     protected override void Awake()
     {

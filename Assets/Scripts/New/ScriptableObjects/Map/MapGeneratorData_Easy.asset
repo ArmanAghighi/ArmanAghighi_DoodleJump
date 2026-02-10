@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: MapGeneratorData_Easy
   m_EditorClassIdentifier: 
   Difficulty: 0
+  MinimumSpace: 1
   Segments:
-  - StartPosition: 40
+  - StartPosition: -4
     PlatformData:
     - PlatformData: {fileID: 11400000, guid: a3bc45f432dac834e869dedac2830b55, type: 2}
       PlatformPercentage: 100
+    MaximumSpace: 1
     EndPosition: 400
   - StartPosition: 400
     PlatformData:
@@ -25,6 +27,7 @@ MonoBehaviour:
       PlatformPercentage: 80
     - PlatformData: {fileID: 11400000, guid: 4b41e3917ff701049a6803b88e96e73a, type: 2}
       PlatformPercentage: 20
+    MaximumSpace: 1.2
     EndPosition: 1000
   - StartPosition: 1000
     PlatformData:
@@ -34,6 +37,7 @@ MonoBehaviour:
       PlatformPercentage: 20
     - PlatformData: {fileID: 11400000, guid: 9e383dce0c843164296dd9b61a72c516, type: 2}
       PlatformPercentage: 10
+    MaximumSpace: 1.8
     EndPosition: 1800
   - StartPosition: 1800
     PlatformData:
@@ -43,6 +47,7 @@ MonoBehaviour:
       PlatformPercentage: 15
     - PlatformData: {fileID: 11400000, guid: 9e383dce0c843164296dd9b61a72c516, type: 2}
       PlatformPercentage: 25
+    MaximumSpace: 1.8
     EndPosition: 3200
   - StartPosition: 3200
     PlatformData:
@@ -54,6 +59,7 @@ MonoBehaviour:
       PlatformPercentage: 20
     - PlatformData: {fileID: 11400000, guid: 9d9475b131739aa4983b0384200a729e, type: 2}
       PlatformPercentage: 10
+    MaximumSpace: 2.2
     EndPosition: 4800
   - StartPosition: 4800
     PlatformData:
@@ -65,6 +71,7 @@ MonoBehaviour:
       PlatformPercentage: 30
     - PlatformData: {fileID: 11400000, guid: 9d9475b131739aa4983b0384200a729e, type: 2}
       PlatformPercentage: 20
+    MaximumSpace: 2.2
     EndPosition: 6600
   - StartPosition: 6600
     PlatformData:
@@ -78,6 +85,7 @@ MonoBehaviour:
       PlatformPercentage: 20
     - PlatformData: {fileID: 11400000, guid: ae5883b0e1d2d3e4ca58ace72ddb2804, type: 2}
       PlatformPercentage: 10
+    MaximumSpace: 2.4
     EndPosition: 9000
   - StartPosition: 9000
     PlatformData:
@@ -91,6 +99,7 @@ MonoBehaviour:
       PlatformPercentage: 15
     - PlatformData: {fileID: 11400000, guid: ae5883b0e1d2d3e4ca58ace72ddb2804, type: 2}
       PlatformPercentage: 15
+    MaximumSpace: 2.6
     EndPosition: 13000
   - StartPosition: 13000
     PlatformData:
@@ -106,6 +115,7 @@ MonoBehaviour:
       PlatformPercentage: 15
     - PlatformData: {fileID: 11400000, guid: dda7f3ead2611f248b3d907074676047, type: 2}
       PlatformPercentage: 15
+    MaximumSpace: 2.6
     EndPosition: 20000
   - StartPosition: 20000
     PlatformData:
@@ -121,5 +131,6 @@ MonoBehaviour:
       PlatformPercentage: 15
     - PlatformData: {fileID: 11400000, guid: dda7f3ead2611f248b3d907074676047, type: 2}
       PlatformPercentage: 10
+    MaximumSpace: 2.8
     EndPosition: 200000
   maxChance: 100

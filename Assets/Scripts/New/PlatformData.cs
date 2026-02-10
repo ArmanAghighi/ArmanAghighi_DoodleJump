@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlatformData", menuName = "Scriptable Objects/PlatformData")]
 public class PlatformData : ScriptableObject
 {
+    public GameObject Prefab;
     public Sprite PlatformSprite;
     public bool IsBreakable;
 
@@ -10,7 +11,7 @@ public class PlatformData : ScriptableObject
     public bool HasAbility;
 
     [Tooltip("Select the platform's ability. Only selectable if HasAbility is enabled.")]
-    public Ability PlatformAbility;
+    public AbilityEnum PlatformAbility;
     
     [Range(1f, 5f)]
     public float Force = 1f;
@@ -19,7 +20,7 @@ public class PlatformData : ScriptableObject
     private void OnValidate()
     {
         if (!HasAbility)
-            PlatformAbility = Ability.None;
+            PlatformAbility = AbilityEnum.None;
     }
 #endif
 }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 395b58b78dc42844da1d8eab6130e751, type: 3}
-  m_Name: PlatformData_AblityBreakable
+  m_Name: PlatformData_AbilityMover(SpringCoil)
   m_EditorClassIdentifier: 
   PlatformSprite: {fileID: 0}
   IsBreakable: 0

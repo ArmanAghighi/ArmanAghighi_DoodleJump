@@ -1,9 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MoverPlatformProperty : MonoBehaviour
 {
+
+}
+
+/*
     [SerializeField] AudioClip _jumpAudioClip;
     private AudioSource _jumpAudioSource;
     private Transform _player;
@@ -56,4 +58,4 @@ public class MoverPlatformProperty : MonoBehaviour
             _jumpAudioSource.Play();
         }
     }
-}
+*/

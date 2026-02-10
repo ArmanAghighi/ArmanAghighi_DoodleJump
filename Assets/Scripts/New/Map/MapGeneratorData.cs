@@ -7,7 +7,8 @@ using UnityEditor;
 [CreateAssetMenu(fileName = "MapGeneratorData", menuName = "Scriptable Objects/MapGeneratorData")]
 public class MapGeneratorData : ScriptableObject
 {
-    public DifficultyLevel Difficulty;
+    public DifficultyLevelEnum Difficulty;
+    [Range(1,2)] public float MinimumSpace;
     public List<MapSegments> Segments;
 
     [HideInInspector] public int maxChance = 100;
@@ -66,6 +67,7 @@ public class MapGeneratorData : ScriptableObject
 
             index = (index + 1) % segment.PlatformData.Count;
         }
+        
     }
 #endif
 }
@@ -76,6 +78,8 @@ public class MapSegments
 {
     public int StartPosition = -4;
     public List<SegmentData> PlatformData;
+    [Range(0,5)]
+    public float MaximumSpace;
     public int EndPosition;
 }
 [System.Serializable]

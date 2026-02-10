@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class WeakPlatform : MonoBehaviour
 {
+
+}
+/*
     [SerializeField] private Sprite _breakingWeakPlatform;//new broken sprite
     [SerializeField] private BoxCollider2D _weakPlatformBoxCollider2d;//box collider of weak platform
     [SerializeField] private int _brokenWeakPlatformSpeed = 5;
@@ -53,4 +56,4 @@ public class WeakPlatform : MonoBehaviour
             Destroy(gameObject);
         }
     }
-}
+*/

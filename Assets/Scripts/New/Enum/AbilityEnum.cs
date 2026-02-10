@@ -1,4 +1,4 @@
-public enum Ability
+public enum AbilityEnum
 {
     None,
     CoilSpring,
