@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class Player : Singleton<Player>
 {
-    
+    public Action<Platform> OnPlatformReach;
+
     private Rigidbody2D _rb;
     private float _moveDirection = 0;
     private SpriteRenderer _spriteRenderer;
-    private MultieControllerMoveAction _moveAction;
-    
+
     [SerializeField , Range(1 , 20)] private int _moveSpeed;
     [SerializeField , Range(1 , 20)] private int _doodleBaseJumpForce;
     [SerializeField , Range(1 , 20)] private int _doodleHorizontalSpeed;
@@ -22,11 +22,6 @@ public class Player : Singleton<Player>
         _rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _weaponSpriteRenderer = _weapon.GetComponent<SpriteRenderer>();
-    }
-
-    void Start()
-    {
-        DoodleMoveStartSystem();
     }
 
     void Update()
@@ -46,11 +41,11 @@ public class Player : Singleton<Player>
     void FixedUpdate()
     {
         _rb.linearVelocity = new Vector2(
-            _moveDirection * _moveSpeed * _doodleHorizontalSpeed * Time.deltaTime,
+            _moveDirection * _moveSpeed * _doodleHorizontalSpeed * Time.fixedDeltaTime,
             _rb.linearVelocity.y
         );
     }
-    
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!collision.collider.CompareTag("Platform"))
@@ -64,22 +59,27 @@ public class Player : Singleton<Player>
             return;
 
         Jump(platform.GetPlatformData.Force);  
+        OnPlatformReach?.Invoke(platform);
     }
 
-    private void DoodleMoveStartSystem()
+    public void OnLeftButtonDown()
     {
-        _moveAction = new MultieControllerMoveAction();
-        _moveAction.Enable();
-        _moveAction.Move.PCHorizontal.performed += context =>
-        {
-            _moveDirection = context.ReadValue<float>();
+        _moveDirection = -1;
+    }
 
-        };
+    public void OnLeftButtonUp()
+    {
+        _moveDirection = 0;
+    }
 
-        _moveAction.Move.PCHorizontal.canceled += context =>
-        {
-            _moveDirection = 0;
-        };
+    public void OnRightButtonDown()
+    {
+        _moveDirection = 1;
+    }
+
+    public void OnRightButtonUp()
+    {
+        _moveDirection = 0;
     }
 
     private void Jump(float force)

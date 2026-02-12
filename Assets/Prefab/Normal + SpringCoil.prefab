@@ -202,6 +202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Normal + SpringCoil
       objectReference: {fileID: 0}
+    - target: {fileID: 3106388014780059206, guid: ca0ee7b79b111fb4d852afd5d5957df5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -136024342, guid: ee8250ae0322142488ed24f1617a8264, type: 3}
     - target: {fileID: 6711656968354730672, guid: ca0ee7b79b111fb4d852afd5d5957df5, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -216,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6711656968354730672, guid: ca0ee7b79b111fb4d852afd5d5957df5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6711656968354730672, guid: ca0ee7b79b111fb4d852afd5d5957df5, type: 3}
       propertyPath: m_LocalRotation.w

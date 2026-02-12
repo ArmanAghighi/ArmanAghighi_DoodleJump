@@ -1,59 +1,63 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
-public class WeakPlatform : MonoBehaviour
+public class WeakPlatform : Platform
 {
-
-}
-/*
-    [SerializeField] private Sprite _breakingWeakPlatform;//new broken sprite
-    [SerializeField] private BoxCollider2D _weakPlatformBoxCollider2d;//box collider of weak platform
-    [SerializeField] private int _brokenWeakPlatformSpeed = 5;
+    [SerializeField] private Sprite _NotBrokenSprite;
+    [SerializeField] private Sprite _brokenPlatform;
+    [SerializeField] private int _brokenWeakPlatformSpeed = 6;
+    
     private SpriteRenderer _spriteRenderer;
-    private bool _brokenWeakPlatform = false;//is the platform broken?
-    private Transform _backGroundTransform;//check where the back ground Y is to deswtroy platform
-    [SerializeField] private int _destroyPointTransform = 10;// Y < backgroundY - 10
-    [SerializeField] AudioClip _destroyWeakClip;
-    private AudioSource _destroyAudioSource;
-    private void Start()
+    private bool _isPlatformBroken = false;
+    private int _platformLife;
+
+    void Awake()
     {
-        _destroyAudioSource = GetComponent<AudioSource>();
-        if (_destroyAudioSource != null)
-        {
-            _destroyAudioSource.clip = _destroyWeakClip;
-        }
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _weakPlatformBoxCollider2d = GetComponent<BoxCollider2D>();
-        GameObject backGroundTransform = GameObject.FindGameObjectWithTag("BackGround");
-        if (backGroundTransform != null)
-        {
-            _backGroundTransform = backGroundTransform.transform;
-        }
+        _platformLife = _platformLifeTime;
     }
-    private void OnCollisionEnter2D(Collision2D other)
+
+    protected override void PlayAudio()
     {
-        if (other.collider.CompareTag("Player") && other.relativeVelocity.y <= 0) 
-        {
-            _destroyAudioSource.Play();
-            _spriteRenderer.sprite = _breakingWeakPlatform;
-            _weakPlatformBoxCollider2d.enabled = false;
-            _brokenWeakPlatform = true;
-        }
-        if (other.gameObject.tag == "GameOver")
-        {
-            Destroy(gameObject);
-        }
+        base.PlayAudio();
     }
+
+    void OnEnable()
+    {
+        Player.Instance.OnPlatformReach += DisablePlatformCoroutineStarter;
+        _platformLifeTime = _platformLife;
+        _spriteRenderer.sprite = _NotBrokenSprite;
+        _isPlatformBroken = false;
+    }
+
+    void OnDisable()
+    {
+        Player.Instance.OnPlatformReach -= DisablePlatformCoroutineStarter;
+    }
+
+    private void DisablePlatformCoroutineStarter(Platform platform)
+    {
+        if (platform != this)
+            return;
+
+        _platformLifeTime--;
+
+        if (_platformLifeTime <= 0)
+            StartCoroutine(DisablePlatform(0.1f));
+    }
+
+    private IEnumerator DisablePlatform(float timer)
+    {
+        yield return new WaitForSeconds(timer);
+        _spriteRenderer.sprite = _brokenPlatform;
+        _isPlatformBroken = true;
+    }
+
     private void Update()
     {
-        if (_brokenWeakPlatform)
+        if (_isPlatformBroken)
         {
             transform.position += Vector3.down * _brokenWeakPlatformSpeed * Time.deltaTime;
         }
-        if (gameObject.transform.position.y < _backGroundTransform.transform.position.y - _destroyPointTransform)
-        {
-            Destroy(gameObject);
-        }
     }
-*/
+}
