@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : Singleton<Player>
 {
@@ -12,6 +13,9 @@ public class Player : Singleton<Player>
     [SerializeField , Range(1 , 20)] private int _moveSpeed;
     [SerializeField , Range(1 , 20)] private int _doodleBaseJumpForce;
     [SerializeField , Range(1 , 20)] private int _doodleHorizontalSpeed;
+
+    [SerializeField] private Button _leftButton;
+    [SerializeField] private Button _rightButton;
 
     [SerializeField] private GameObject _weapon;
     private SpriteRenderer _weaponSpriteRenderer;
@@ -67,14 +71,14 @@ public class Player : Singleton<Player>
         _moveDirection = -1;
     }
 
-    public void OnLeftButtonUp()
-    {
-        _moveDirection = 0;
-    }
-
     public void OnRightButtonDown()
     {
         _moveDirection = 1;
+    }
+
+    public void OnLeftButtonUp()
+    {
+        _moveDirection = 0;
     }
 
     public void OnRightButtonUp()

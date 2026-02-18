@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395b58b78dc42844da1d8eab6130e751, type: 3}
   m_Name: PlatformData_AbilityNormal(SpringCoil)
   m_EditorClassIdentifier: 
+  Prefab: {fileID: 4115158077239899912, guid: de697902d5e6f244c9725ce4c41ff928, type: 3}
   PlatformSprite: {fileID: 0}
   IsBreakable: 0
-  HasAbility: 0
-  PlatformAbility: 0
-  Force: 1
+  HasAbility: 1
+  PlatformAbility: 1
+  Force: 2.5

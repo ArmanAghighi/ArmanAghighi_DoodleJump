@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395b58b78dc42844da1d8eab6130e751, type: 3}
   m_Name: PlatformData_Normal
   m_EditorClassIdentifier: 
+  Prefab: {fileID: 61011488524764134, guid: ca0ee7b79b111fb4d852afd5d5957df5, type: 3}
   PlatformSprite: {fileID: 21300000, guid: ea71d790e97ac5e4490234793e22228d, type: 3}
   IsBreakable: 0
-  Force: 1
+  HasAbility: 0
+  PlatformAbility: 0
+  Force: 1.5
