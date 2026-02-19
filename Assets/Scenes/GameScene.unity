@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 26257019}
   - component: {fileID: 26257020}
   - component: {fileID: 26257021}
+  - component: {fileID: 26257022}
   m_Layer: 0
   m_Name: PlatformDespawnTrigger
   m_TagString: Untagged
@@ -145,7 +146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26257018}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -5.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -210,6 +211,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd702ec159c950341a19268b245fba35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &26257022
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26257018}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &39135481
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,12 +264,12 @@ Transform:
   m_GameObject: {fileID: 39135481}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 26257019}
-  m_Father: {fileID: 1907889559}
+  m_Father: {fileID: 576245318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &39135483
 MonoBehaviour:
@@ -413,12 +441,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576245317}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 39135482}
+  m_Father: {fileID: 1066474511}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &576245319
 MonoBehaviour:
@@ -835,7 +864,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 576245318}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1066474512
@@ -862,6 +892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1230091865}
   - component: {fileID: 1230091868}
+  - component: {fileID: 1230091869}
   - component: {fileID: 1230091867}
   - component: {fileID: 1230091866}
   m_Layer: 5
@@ -933,31 +964,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1230091867}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1907889562}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: OnRightButtonDown
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1907889562}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: OnLeftButtonUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1230091867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,6 +1003,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230091864}
   m_CullTransparentMesh: 1
+--- !u!114 &1230091869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230091864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c19ea86595efd264f9a4271fb559715b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 1
 --- !u!1 &1264455819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,9 +1367,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2059975450}
-  - {fileID: 108204129}
   - {fileID: 1230091865}
   - {fileID: 1697932747}
+  - {fileID: 108204129}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1367,6 +1387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1697932747}
   - component: {fileID: 1697932750}
+  - component: {fileID: 1697932751}
   - component: {fileID: 1697932749}
   - component: {fileID: 1697932748}
   m_Layer: 5
@@ -1438,31 +1459,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1697932749}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1907889562}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: OnLeftButtonDown
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1907889562}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: OnRightButtonUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1697932749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1501,6 +1498,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697932746}
   m_CullTransparentMesh: 1
+--- !u!114 &1697932751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697932746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c19ea86595efd264f9a4271fb559715b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 0
 --- !u!1 &1792931765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,7 +1735,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 39135482}
   - {fileID: 2023957525}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1790,7 +1799,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.02441959, y: -0.49472103}
+  m_Offset: {x: 0.024419606, y: -0.148238}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1800,7 +1809,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.59857905, y: 0.210558}
+  m_Size: {x: 0.59857905, y: 0.90352404}
   m_EdgeRadius: 0
 --- !u!114 &1907889562
 MonoBehaviour:
@@ -2066,7 +2075,6 @@ SceneRoots:
   - {fileID: 1066474511}
   - {fileID: 1429871101}
   - {fileID: 2020655721}
-  - {fileID: 576245318}
   - {fileID: 1907889559}
   - {fileID: 473046094}
   - {fileID: 609276182}

@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Player : Singleton<Player>
 {
@@ -13,10 +12,7 @@ public class Player : Singleton<Player>
     [SerializeField , Range(1 , 20)] private int _moveSpeed;
     [SerializeField , Range(1 , 20)] private int _doodleBaseJumpForce;
     [SerializeField , Range(1 , 20)] private int _doodleHorizontalSpeed;
-
-    [SerializeField] private Button _leftButton;
-    [SerializeField] private Button _rightButton;
-
+    
     [SerializeField] private GameObject _weapon;
     private SpriteRenderer _weaponSpriteRenderer;
 
@@ -40,6 +36,24 @@ public class Player : Singleton<Player>
             _spriteRenderer.flipX = true;
             _weaponSpriteRenderer.flipY = true;
         }
+
+         if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 screenPos = Input.mousePosition;
+
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
+            worldPos.z = 0f; // مهم برای 2D
+
+            if (worldPos.y > transform.position.y)
+            {
+                Fire();
+            }
+        }
+    }
+
+    private void Fire()
+    {
+        throw new NotImplementedException();
     }
 
     void FixedUpdate()

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
@@ -13,10 +14,10 @@ public class GameManager : Singleton<GameManager>
         base.Awake();
         _isGameStarted = false;
 
-        BuildWarmUpMap();
+        PlatformDestructor.Instance.OnGameOver += GameOver;
     }
 
-    private void BuildWarmUpMap()
+    private void GameOver()
     {
         
     }
